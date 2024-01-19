@@ -15,13 +15,24 @@
     "incremental": true,
     "plugins": [
       {
-        "name": "next"
-      }
+        "name": "next",
+      },
     ],
+    "baseUrl": "./",
     "paths": {
-      "@/*": ["./*"]
-    }
+      "@src/*": ["src/*"],
+      "@components/*": ["src/components/*"],
+      "@lib/*": ["src/lib/*"],
+    },
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
-  "exclude": ["node_modules"]
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    "src/script/placeholder-data.js",
+    "src/script/seed.js",
+    "src/script/seed.mts",
+  ],
+  "exclude": ["node_modules"],
 }
